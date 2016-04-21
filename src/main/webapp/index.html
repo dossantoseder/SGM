@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="style/bootstrap.css">
+</head>
+<body>
+	<form name="frm_login" id="frm_login" action="Servlet.Controller"
+		method="POST">
+
+		<h1>Login</h1>
+		<p class="nome">
+			<label for="login">Login</label> <input type="text" id="loginid"
+				placeholder="Digite seu login" required="required" name="login" />
+		</p>
+
+		<p class="senha">
+			<label for="senha">Senha</label> <input type="password" id="senhaid"
+				placeholder="Digite sua senha" required="required" name="senha" />
+		</p>
+
+		<input type="hidden" name="action" value="AuthenticationCommand" />
+		<p class="submit">
+			<input type="submit" value="Enviar" />
+		</p>
+
+	</form>
+
+</body>
+</html>
