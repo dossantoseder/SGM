@@ -1,11 +1,10 @@
 package br.com.sgm.model;
 
-public class Paciente {
-
+public class Medico {
 	private long identificador;
 	private String nome;
-	private int RG;
-	private int CPF;
+	private int CRM;
+	private Especialidade especialidade;
 
 	public long getIdentificador() {
 		return identificador;
@@ -23,20 +22,20 @@ public class Paciente {
 		this.nome = nome;
 	}
 
-	public int getRG() {
-		return RG;
+	public int getCRM() {
+		return CRM;
 	}
 
-	public void setRG(int rG) {
-		RG = rG;
+	public void setCRM(int cRM) {
+		CRM = cRM;
 	}
 
-	public int getCPF() {
-		return CPF;
+	public Especialidade getEspecialidade() {
+		return especialidade;
 	}
 
-	public void setCPF(int cPF) {
-		CPF = cPF;
+	public void setEspecialidade(Especialidade especialidade) {
+		this.especialidade = especialidade;
 	}
 
 }

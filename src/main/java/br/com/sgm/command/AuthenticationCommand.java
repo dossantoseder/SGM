@@ -17,11 +17,11 @@ public class AuthenticationCommand implements Command {
 	public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		// TODO Auto-generated method stub
 		// RequestDispatcher rd;
-		String rd = "view/home.html";
+		String rd;
 		String name = req.getParameter("name");
 		String password = req.getParameter("password");
 
-		/*User user = validateLogin(name, password);
+		User user = validateLogin(name, password);
 
 		if (user == null) {
 			// rd = req.getRequestDispatcher("/index.html");
@@ -31,7 +31,7 @@ public class AuthenticationCommand implements Command {
 			session.setAttribute("user", user);
 			// rd = req.getRequestDispatcher("/index.html");
 			rd = "view/home.html";
-		}*/
+		}
 
 		// rd.forward(req, res);
 		return rd;
@@ -39,6 +39,7 @@ public class AuthenticationCommand implements Command {
 
 	private User validateLogin(String name, String password) {
 		// All parameters must be valid
+		User userOne = new User("one", "one");
 		if (name == null || password == null) {
 			return null;
 		}
