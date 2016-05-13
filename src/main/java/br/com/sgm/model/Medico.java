@@ -1,41 +1,52 @@
 package br.com.sgm.model;
 
 public class Medico {
-	private long identificador;
-	private String nome;
-	private int CRM;
-	private Especialidade especialidade;
 
-	public long getIdentificador() {
-		return identificador;
-	}
+    private long identificador;
+    private String nome;
+    private int CRM;
+    private Especialidade especialidade;
 
-	public void setIdentificador(long identificador) {
-		this.identificador = identificador;
-	}
+    public long getIdentificador() {
+        return identificador;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public void setIdentificador(long identificador) {
+        this.identificador = identificador;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public int getCRM() {
-		return CRM;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public void setCRM(int cRM) {
-		CRM = cRM;
-	}
+    public int getCRM() {
+        return CRM;
+    }
 
-	public Especialidade getEspecialidade() {
-		return especialidade;
-	}
+    public void setCRM(int cRM) {
+        CRM = cRM;
+    }
 
-	public void setEspecialidade(Especialidade especialidade) {
-		this.especialidade = especialidade;
-	}
+    public Especialidade getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(Especialidade especialidade) {
+        this.especialidade = especialidade;
+    }
+
+    public int consultarCID() throws Exception {
+
+        return 1;
+    }
+
+    public int criarPrescricao() throws Exception {
+
+        return 1;
+    }
 
 }

@@ -67,5 +67,10 @@ public class Exame {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+        
+        public int gerarGuiaPagamentoExame() throws Exception {
+
+        return 1;
+    }
 
 }

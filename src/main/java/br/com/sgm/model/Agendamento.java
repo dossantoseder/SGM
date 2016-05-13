@@ -56,5 +56,10 @@ public class Agendamento {
 	public void setMedico(Medico medico) {
 		this.medico = medico;
 	}
+        
+        public int processarAgendamento() throws Exception {
+
+        return 1;
+    }
 
 }

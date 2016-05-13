@@ -56,5 +56,10 @@ public class Prontuario {
 	public void setAnamnese(String anamnese) {
 		this.anamnese = anamnese;
 	}
+        
+        public int adicionarExame() throws Exception {
+
+        return 1;
+    }
 
 }

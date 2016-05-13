@@ -9,7 +9,7 @@ public class Convenio {
 	private int faixaEtaria;
 	private String tipoInternacao;   
 	//private double taxaCadastro;
-	//private String areaComercialização;
+	//private String areaComercializaï¿½ï¿½o;
 	private Calendar vencimento;
 	public String getNome() {
 		return nome;
@@ -47,5 +47,6 @@ public class Convenio {
 	public void setVencimento(Calendar vencimento) {
 		this.vencimento = vencimento;
 	}
+        
 
 }
