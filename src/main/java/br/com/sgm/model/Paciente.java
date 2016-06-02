@@ -3,9 +3,27 @@ package br.com.sgm.model;
 public class Paciente {
 
     private long identificador;
+    private String email;
+    private String telefone;
     private String nome;
     private int RG;
     private int CPF;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
     public long getIdentificador() {
         return identificador;
