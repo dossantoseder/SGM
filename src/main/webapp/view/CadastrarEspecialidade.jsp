@@ -50,7 +50,7 @@
                 <p>Cadastrar Especialidade</p>
             </div>
             <div class="container">
-                <form action="CadastroResponsavel" method="post">  
+                <form action="EspecialidadeControl" method="post">  
                     <div class="form-group row ">
                          <div class="col-md-6">            
                             <label for="txtCodigoEspecialidade" class="col-sm-2 form-control-label">Código</label>
@@ -79,7 +79,7 @@
                         <div class="col-md-6">
                             <label for="txtDescricaoEspecialidade" class="col-sm-2 form-control-label">Descrição</label>
                             <div class="col-sm-6">
-                                <textarea  class="form-control" rows="4" id="txtDescricaoEspecialidade"></textarea>
+                                <textarea  class="form-control" rows="4" name="txtDescricaoEspecialidade"></textarea>
                             </div>
                         </div>
                     </div>               

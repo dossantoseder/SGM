@@ -2,7 +2,7 @@ package br.com.sgm.model;
 
 public class Procedimento {
 
-    private long identificador;
+    private int identificador;
     private String nome;
     private Paciente paciente;
     private Medico medico;
@@ -15,7 +15,7 @@ public class Procedimento {
         return identificador;
     }
 
-    public void setIdentificador(long identificador) {
+    public void setIdentificador(int identificador) {
         this.identificador = identificador;
     }
 
@@ -75,8 +75,8 @@ public class Procedimento {
         this.valor = valor;
     }
 
-    public int cadastrarProcedimento() throws Exception {
+    public boolean cadastrarProcedimento(Procedimento procedimento) throws Exception {
 
-        return 1;
+        return true;
     }
 }

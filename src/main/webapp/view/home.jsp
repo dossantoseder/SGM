@@ -54,7 +54,7 @@
                 <div class="col-sm-3">      
                     <img src="Imagens/sgm.png" class="img-responsive" style="width:100%" alt="Image">
                 </div>
-                <p>A reutilização de software se baseia no uso de conceitos, produtos ou soluções previamente elaboradas ou adquiridas para criação de um novo software, visando melhorar significativamente a qualidade e a produtividade. Reusar um produto significa poder reusar partes de um sistema desenvolvido anteriormente como: especificações, módulos de um projeto, arquitetura e código fonte. A principal motivação para a reutilização está relacionada ao aumento dos níveis de qualidade e produtividade no desenvolvimento de software. Neste sentido, este artigo apresentará o conceito de reutilização de software, principais benefícios e desafios encontrados na prática do reuso, alguns tipos de reutilização e seu impacto no contexto da Engenharia de Software.</p>
+                <p>A reutilização de software se baseia no uso de conceitos, produtos ou soluções previamente elaboradas ou adquiridas para criação de um novo software, visando melhorar significativamente a qualidade e a produtividade. Reusar um produto significa poder reusar partes de um sistema desenvolvido anteriormente como: especificações, módulos de um projeto, arquitetura e código fonte. A principal motivação para a reutilização está relacionada ao aumento dos níveis de qualidade e produtividade no desenvolvimento de software.</p>
             </div>
         </div>
 

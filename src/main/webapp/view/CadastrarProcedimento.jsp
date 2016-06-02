@@ -64,9 +64,9 @@
                             </div>                        
                         </div>
                         <div class="col-md-6">            
-                            <label for="txtProcedimento" class="col-sm-2 form-control-label">Nome</label>
+                            <label for="txtNomeProcedimento" class="col-sm-2 form-control-label">Nome</label>
                             <div class="col-sm-6">
-                                <input type="text" maxlength="9" class="form-control" name="txtProcedimento">
+                                <input type="text" maxlength="9" class="form-control" name="txtNomeProcedimento">
                             </div>                        
                         </div>
                     </div>
@@ -88,13 +88,13 @@
                         <div class="col-md-6">
                             <label for="txtDescricaoProcedimento" class="col-sm-2 form-control-label">Descrição</label>
                             <div class="col-sm-6">
-                                <textarea  class="form-control" rows="4" id="txtDescricaoProcedimento"></textarea>
+                                <textarea  class="form-control" rows="4" name="txtDescricaoProcedimento"></textarea>
                             </div>
                         </div>
                          <div class="col-md-6">
                             <label for="txtExamesAtrelados" class="col-sm-2 form-control-label">Exames Necessários</label>
                             <div class="col-sm-6">
-                                <textarea  class="form-control" rows="4" id="txtExamesAtrelados"></textarea>
+                                <textarea  class="form-control" rows="4" name="txtExamesAtrelados"></textarea>
                             </div>
                         </div>
                     </div>               

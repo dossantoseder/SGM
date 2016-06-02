@@ -1,16 +1,27 @@
 package br.com.sgm.model;
 
+import br.com.sgm.dao.EspecialidadeDAO;
+
 public class Especialidade {
 
-    private long identificador;
+    private int identificador;
     private String descricao;
     private double valor;
+    private String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public long getIdentificador() {
         return identificador;
     }
 
-    public void setIdentificador(long identificador) {
+    public void setIdentificador(int identificador) {
         this.identificador = identificador;
     }
 
@@ -29,10 +40,11 @@ public class Especialidade {
     public void setValor(double valor) {
         this.valor = valor;
     }
-
-    public int cadastrarEspecialidade() throws Exception {
-
-        return 1;
+ 
+    public boolean cadastrarEspecialidade(Especialidade especialidade) throws Exception {
+        //EspecialidadeDAO especialidade = new EspecialidadeDAO();
+        //especialidade.save(especialidade);
+        return true;
     }
 
 }
