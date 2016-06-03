@@ -1,14 +1,16 @@
 package br.com.sgm.model;
 
+import br.com.sgm.dao.DefaultPaciente;
+
 public class Paciente {
 
-    private long identificador;
+    private int identificador;
     private String email;
     private String telefone;
     private String nome;
     private int RG;
     private int CPF;
-
+  
     public String getEmail() {
         return email;
     }
@@ -25,11 +27,11 @@ public class Paciente {
         this.telefone = telefone;
     }
 
-    public long getIdentificador() {
+    public int getIdentificador() {
         return identificador;
     }
 
-    public void setIdentificador(long identificador) {
+    public void setIdentificador(int identificador) {
         this.identificador = identificador;
     }
 
@@ -56,7 +58,38 @@ public class Paciente {
     public void setCPF(int cPF) {
         CPF = cPF;
     }
+    
+    public boolean cadastrarPaciente(Paciente paciente) throws Exception{
+        boolean resposta= false;
+        DefaultPaciente pacienteDAO = new DefaultPaciente();
+        resposta = pacienteDAO.cadastrarPaciente(paciente);
+       
+        return resposta;
+    }
 
+    public boolean excluirPaciente(Paciente paciente) throws Exception{
+        boolean resposta= false;
+        DefaultPaciente pacienteDAO = new DefaultPaciente();
+      //  resposta = pacienteDAO.excluirPaciente(paciente);
+       
+        return resposta;
+    }
+    
+     public boolean consultarPaciente(Paciente paciente) throws Exception{
+        boolean resposta= false;
+        DefaultPaciente pacienteDAO = new DefaultPaciente();
+        resposta = pacienteDAO.consultar(paciente);
+       
+        return resposta;
+    }
+     
+      public boolean atualizarPaciente(Paciente paciente) throws Exception{
+        boolean resposta= false;
+        DefaultPaciente pacienteDAO = new DefaultPaciente();
+        resposta = pacienteDAO.atualizarPaciente(paciente);
+       
+        return resposta;
+    }
     public int pagarConta() throws Exception {
 
         return 1;
