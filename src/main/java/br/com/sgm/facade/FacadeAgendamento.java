@@ -3,7 +3,7 @@ package br.com.sgm.facade;
 import java.util.List;
 
 import br.com.sgm.dao.DefaultAgendamento;
-import br.com.sgm.dao.DefaultMedico;
+//import br.com.sgm.dao.DefaultMedico;
 import br.com.sgm.dao.DefaultPaciente;
 import br.com.sgm.model.Agendamento;
 import br.com.sgm.model.Medico;

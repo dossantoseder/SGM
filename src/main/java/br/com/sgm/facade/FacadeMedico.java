@@ -2,13 +2,13 @@ package br.com.sgm.facade;
 
 import java.util.List;
 
-import br.com.sgm.dao.DefaultMedico;
+//import br.com.sgm.dao.DefaultMedico;
 import br.com.sgm.model.Medico;
 
 public class FacadeMedico {
 
 	Medico medico;
-	DefaultMedico defaultMedico;
+	//DefaultMedico defaultMedico;
 
 	public FacadeMedico() {
 		//defaultMedico = new DefaultMedico();
