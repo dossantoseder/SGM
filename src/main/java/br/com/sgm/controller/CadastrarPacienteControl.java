@@ -18,23 +18,7 @@ public class CadastrarPacienteControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Paciente paciente = new Paciente();
-        boolean resposta = false;
-        
-        paciente.setNome(request.getParameter("txtNome"));   
-        paciente.setRG(Integer.parseInt(request.getParameter("txtRg")));       //a servlet pode não funcionar por causa dessa converã para inteiro  
-        paciente.setEmail(request.getParameter("txtEmail"));
-        paciente.setCPF(Integer.parseInt(request.getParameter("txtCpf")));
-        paciente.setTelefone(request.getParameter("txtTelefone"));  
-        
-        try {
-            resposta = paciente.cadastrarPaciente(paciente);
-        } catch (Exception ex) {
-            Logger.getLogger(CadastrarPacienteControl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        RequestDispatcher rd = request.getRequestDispatcher("sucesso.jsp");
-        rd.include(request, response);
+       
         
     }
 

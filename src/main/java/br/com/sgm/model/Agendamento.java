@@ -2,28 +2,41 @@ package br.com.sgm.model;
 
 import java.util.Calendar;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.Length;
-@Entity
 public class Agendamento {
-	
-	@Id
-	@SequenceGenerator(name = "Agendamento_SEQ", sequenceName = "Agendamento_SEQ", allocationSize = 1)  
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="Agendamento_SEQ")
-	private long identificador;
-	@NotNull(message = "N�o pode ser nulo")
-	@Length(min = 4, max = 100, message = "N�o pode ser nulo")
+
+	private int identificador;
 	private Calendar data;
-	@NotNull()
 	private String hora;
 	private Paciente paciente;
 	private Medico medico;
+
+	public Agendamento() {
+
+	}
+
+	public Agendamento(String hora, Paciente paciente, Medico medico) {
+		this.setData(data);
+		this.setHora(hora);
+		this.setPaciente(paciente);
+		this.setMedico(medico);
+	}
+
+	public Agendamento(int identificador,String hora, Paciente paciente, Medico medico) {
+		this.setIdentificador(identificador);
+		this.setData(data);
+		this.setHora(hora);
+		this.setPaciente(paciente);
+		this.setMedico(medico);
+
+	}
+
+	public int getIdentificador() {
+		return identificador;
+	}
+
+	public void setIdentificador(int identificador) {
+		this.identificador = identificador;
+	}
 
 	public Calendar getData() {
 		return data;
@@ -56,10 +69,5 @@ public class Agendamento {
 	public void setMedico(Medico medico) {
 		this.medico = medico;
 	}
-        
-        public int processarAgendamento() throws Exception {
-
-        return 1;
-    }
 
 }

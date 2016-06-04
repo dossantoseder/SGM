@@ -1,5 +1,6 @@
 
-<%@page import="br.com.sgm.model.Paciente"%>
+
+<%@page import="br.com.sgm.model.Medico"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,7 @@
             }
         </style>
 
-        <title>Funcionário</title>
+        <title>Médico</title>
     </head>
     <body>
         <nav class="navbar navbar-inverse" style="min-height: 135px">
@@ -38,7 +39,7 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Funcionário</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Médico</a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
                         <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
@@ -51,13 +52,13 @@
                 <p>Consultar Paciente</p>
             </div>
             <div class="container">
-                <form name="consultarPaciente" action="Servlet.Controller" method="post">  
-                    <input type="hidden" name="action" value="ConsultarPacienteControl" />
+                <form name="consultarMedico" action="Servlet.Controller" method="post">  
+                    <input type="hidden" name="action" value="ListarMedicoCommand" />
                     <div class="form-group row">
-                        <% Paciente paciente = (Paciente) request.getAttribute("pacienteConsulta");%>
-                        <label for="txtIdPaciente" class="col-sm-2 form-control-label">Id do Paciente</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtIdPaciente">
+                        <% Medico medico = (Medico) request.getAttribute("MedicoConsulta");%>
+                        <label for="txtCrm" class="col-sm-1 form-control-label">CRM</label>
+                        <div class="col-sm-1">
+                            <input type="text" class="form-control" name="txtCrm">
                         </div>
                     </div>                  
                     <button type="submit" class="btn btn-warning">Consultar</button>                                                      
@@ -68,21 +69,19 @@
                                     <tr>
                                         <th>Código</th>
                                         <th>Nome</th>
-                                        <th>CPF</th>
-                                        <th>Telefone</th>
+                                        <th>Especialidade</th>
                                         <th>Editar</th>
                                         <th>Excluir</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <% if (paciente != null) {%>
+                                    <% if (medico != null) {%>
                                     <tr>
-                                        <td><%=paciente.getIdentificador()%></td>
-                                        <td><%=paciente.getNome()%></td>
-                                        <td><%=paciente.getCPF()%></td>
-                                        <td><%=paciente.getTelefone()%></td>
-                                        <td><a href="alterarPaciente.jsp?nome=<%=paciente.getNome()%>&email=<%=paciente.getEmail()%>&telefone=<%=paciente.getTelefone()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                       
-                                        <td><a href="ExcluirPaciente??codigo=<%=paciente.getIdentificador()%>"><span class="glyphicon glyphicon-remove"></span></a></td>  
+                                        <td><%=medico.getIdentificador()%></td>
+                                        <td><%=medico.getNome()%></td>
+                                        <td><%=medico.getEspecialidade()%></td>
+                                        <td><a href="AlterarMedico.jsp?nome=<%=medico.getNome()%>&especialidade=<%=medico.getEspecialidade()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                       
+                                        <td><a href="ExcluirMedicoCommand??codigo=<%=medico.getIdentificador()%>"><span class="glyphicon glyphicon-remove"></span></a></td>  
                                     </tr>
                                     <% }%>   
                                 </tbody>

@@ -4,20 +4,16 @@ import java.util.Calendar;
 import java.util.List;
 
 import br.com.sgm.model.Agendamento;
+import br.com.sgm.model.Paciente;
 
 public interface AgendamentoDAO {
 	
-	void save(Agendamento agendamento);
+	List<Agendamento> buscarPorCampus(String campus);
+	public boolean cadastrarAgendamento(Agendamento agendamento);
+	public boolean atualizarAgendamento(Agendamento agendamento);
+	public boolean excluirAgendamento(Agendamento agendamento);
+	public Agendamento getAgendamento(int rg);
+	public List<Agendamento> getAgendamento();
 
-	void update(Agendamento agendamento);
-
-	void refresh(Agendamento agendamento);
-
-	Agendamento load(Agendamento agendamento);
-
-	List<Agendamento> buscarPorPaciente(String nomePaciente);
-	
-	List<Agendamento> buscarPorMedico(String nomeMedico);
-	
-	List<Agendamento> buscarPorData(Calendar data);
 }
+	

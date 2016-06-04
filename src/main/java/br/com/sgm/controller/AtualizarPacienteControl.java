@@ -19,21 +19,7 @@ public class AtualizarPacienteControl extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
       
-        Paciente paciente = new Paciente();
-        boolean resposta = false;
-        
-        paciente.setNome(request.getParameter("txtNome"));   
-        paciente.setEmail(request.getParameter("txtEmail"));
-        paciente.setTelefone(request.getParameter("txtTelefone")); 
-        
-        try {
-            resposta = paciente.atualizarPaciente(paciente);
-        } catch (Exception ex) {
-            Logger.getLogger(AtualizarPacienteControl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-       RequestDispatcher rd = request.getRequestDispatcher("sucesso.jsp");
-       rd.forward(request, response);
+      
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

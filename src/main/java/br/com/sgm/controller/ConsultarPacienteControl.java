@@ -18,20 +18,7 @@ public class ConsultarPacienteControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Paciente paciente = new Paciente();
-        boolean resposta = false;
-        
-        paciente.setIdentificador(Integer.parseInt(request.getParameter("txtIdPaciente")));   
-        
-        try {
-            resposta = paciente.consultarPaciente(paciente);
-        } catch (Exception ex) {
-            Logger.getLogger(ConsultarPacienteControl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-       request.setAttribute("pacienteConsulta", paciente);
-       RequestDispatcher rd = request.getRequestDispatcher("ConsultarPaciente.jsp");
-       rd.forward(request, response);
+       
         
     }
 

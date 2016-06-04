@@ -17,24 +17,7 @@ public class ProcedimentoCadastroControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Procedimento procedimento = new Procedimento();
-        Exame exame = new Exame();
-        boolean resposta = false;
        
-        //Pegando parâmetros da tela. 
-        procedimento.setIdentificador(Integer.parseInt(request.getParameter("txtCodigoProcedimento")));   //a servlet pode não funcionar por causa dessa converã para inteiro  
-        procedimento.setNome(request.getParameter("txtNomeProcedimento"));
-        procedimento.setValor(Double.valueOf(request.getParameter("txtValorBase")));
-        procedimento.setDescricao(request.getParameter("txtDescricaoProcedimento"));
-        procedimento.setTipoDeProcedimento(request.getParameter("txtTipoProcedimento"));
-        exame.setNomeExame(request.getParameter("txtExamesAtrelados"));
-        procedimento.setExame(exame);
-        
-        try {
-            resposta = procedimento.cadastrarProcedimento(procedimento);
-        } catch (Exception ex) {
-            Logger.getLogger(ProcedimentoCadastroControl.class.getName()).log(Level.SEVERE, null, ex);
-        }
        
     }
 

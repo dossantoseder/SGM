@@ -34,17 +34,20 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top: 0.5cm">
                     <ul class="nav navbar-nav">
-                     <!--<li class=""><a href="#" style="color:#FFFFFF">Escolas Parceiras</a></li>-->
                         <li class=""><a href="faleConosco.jsp" style="color:#FFFFFF">Fale Conosco</a></li>
                         <li class=""><a href="Inicio.jsp" style="color:#FFFFFF">Sobre o SGM</a></li>
                     </ul>
-                    <form class="navbar-form navbar-right" role="search" action="LoginPerfil" method="post">
-                        <div class="form-group" method="post" action="LoginPerfil" accept-charset="UTF-8">
-                            <input type="text" name="txtEmailLogin" class="form-control" placeholder="Email">
-                            <input type="password" name="txtSenhaLogin" class="form-control" placeholder="Senha">
-                        </div>
-                        <button type="submit" class="btn btn-warning waves-effect waves-light"><i class="fa fa-arrow-right right"></i>Entrar</button>
+                    <form class="navbar-form navbar-right" role="search" name="frm_login" id="frm_login" action="Servlet.Controller" method="POST">
+                        <p class="nome">
+                            <label for="login">Login</label> <input type="text" id="loginid" placeholder="Digite seu login" class="form-control" required="required" name="txtlogin" />
+                            <label for="senha">Senha</label> <input type="password" id="senhaid" placeholder="Digite sua senha" class="form-control" required="required" name="txtsenha" />
+                        </p>
+                        <input type="hidden" name="action" value="AuthenticationCommand" />
+                        <p class="submit">
+                            <button type="submit" class="btn btn-warning waves-effect waves-light"><i class="fa fa-arrow-right right"></i>Entrar</button>
+                        </p>
                     </form>
+
                 </div>
             </div>
         </nav>

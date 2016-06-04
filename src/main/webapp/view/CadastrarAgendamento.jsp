@@ -21,7 +21,7 @@
             }
         </style>
 
-        <title>Funcionário</title>
+        <title>Agendamento</title>
     </head>
     <body>
         <nav class="navbar navbar-inverse" style="min-height: 135px">
@@ -37,7 +37,7 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Funcionário</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Médico</a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
                         <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
@@ -47,63 +47,44 @@
         </nav>
         <div class="jumbotron">
             <div class="container text-center">
-                <p>Cadastrar Paciente</p>
+                <p>Realizar Agendamento</p>
             </div>
             <div class="container">
-                <form name="cadastrarPaciente" action="Servlet.Controller" method="post">  
-                    <input type="hidden" name="action" value="CadastrarPacienteControl" />
+                <form name="realizarAgendamento" action="Servlet.Controller" method="post">  
+                    <input type="hidden" name="action" value="CadastarAgendamentoCommand" />
                     <div class="form-group row ">
-                        <div class="col-md-6">            
-                            <label for="txtNome" class="col-sm-2 form-control-label">Nome</label>
-                            <div class="col-sm-6">
-                                <input type="text" maxlength="25" class="form-control" name="txtNome">
+                        <div class="col-md-7">            
+                            <label for="txtExame" class="col-sm-2 form-control-label">Exame</label>
+                            <div class="col-sm-8">
+                                <input type="text" maxlength="25" class="form-control" name="txtExame">
                             </div>                        
-                        </div>
-                        <div class="col-md-6">
-                            <label for="txtRg" class="col-sm-2 form-control-label">RG</label>
-                            <div class="col-sm-4">
-                                <input  type="number" class="form-control" name="txtRg">
-                            </div>
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <div class="col-md-6">            
-                            <label for="txtEmail" class="col-sm-2 form-control-label">Email</label>
-                            <div class="col-sm-6">
-                                <input type="text" maxlength="9" class="form-control" name="txtEmail">
-                            </div>                        
-                        </div>
-                        <div class="col-md-6">            
-                            <label for="txtCpf" class="col-sm-2 form-control-label">CPF</label>
+                        <div class="col-md-7">            
+                            <label for="txtData" class="col-sm-2 form-control-label">Data</label>
                             <div class="col-sm-4">
-                                <input type="text" maxlength="11" class="form-control" name="txtCpf">
+                                <input type="text" maxlength="9" class="form-control" name="txtData">
                             </div>                        
-                        </div>
+                        </div>  
                     </div>
                     <div class="form-group row">
-                        <div class="col-md-6">            
-                            <label for="txtTelefone" class="col-sm-2 form-control-label">Telefone</label>
-                            <div class="col-sm-4">
-                                <input type="text" maxlength="9" class="form-control" name="txtTelefone">
+                        <div class="col-md-7">            
+                            <label for="txtCrm" class="col-sm-2 form-control-label">CRM</label>
+                            <div class="col-sm-2">
+                                <input type="text" maxlength="9" class="form-control" name="txtCrm">
                             </div>                        
                         </div>
-                        <div class="col-md-6">            
-                            <label for="txtSenha" class="col-sm-2 form-control-label">Senha</label>
-                            <div class="col-sm-4">
-                                <input type="text" maxlength="9" class="form-control" name="txtSenha">
+                    </div>  
+                     <div class="form-group row">
+                        <div class="col-md-7">            
+                            <label for="txtNomePaciente" class="col-sm-2 form-control-label">Nome do Paciente</label>
+                            <div class="col-sm-2">
+                                <input type="text" maxlength="9" class="form-control" name="txtNomePaciente">
                             </div>                        
                         </div>
-                    </div>
-                    <div class="form-group row"> 
-                        <div class="col-md-6">            
-                            <label for="txtLogin" class="col-sm-2 form-control-label">Login</label>
-                            <div class="col-sm-4">
-                                <input type="text" maxlength="9" class="form-control" name="txtLogin">
-                            </div>                        
-                        </div>
-
-                    </div>               
-                    <button type="submit" class="btn btn-warning">Cadastar</button>
+                    </div>      
+                    <button type="submit" class="btn btn-warning">Cadastrar</button>
                 </form>
             </div>
         </div>

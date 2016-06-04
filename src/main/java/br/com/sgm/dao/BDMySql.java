@@ -8,7 +8,7 @@ public class BDMySql {
 	private static BDMySql singleton = null;
 	private static Connection con = null;
 
-	// padrao de projeto que cria uma unica instancia da classe BDMySql
+	// padrao de projeto que cria uma �nica instancia da classe BDMySql
 	public static BDMySql getInstance() {
 		if (singleton == null) {
 			singleton = new BDMySql();
@@ -20,17 +20,17 @@ public class BDMySql {
 	private BDMySql() {
 		try {
 
-			String url = "jdbc:postgresql://localhost:5432/sgm";
-			String usuario = "postgres";
-			String senha = "postgres";
-			/*
-			 * String url = "jdbc:mysql://localhost:3306/sgm";
-			 * String usuario ="root";
-			 * String senha = "p0s25@05";
-			 */
+			//String url = "jdbc:postgresql://localhost:5432/sgm";
+			//String usuario = "postgres";
+			//String senha = "123456";
+			
+			  String url = "jdbc:mysql://localhost:3306/sgm";
+			  String usuario ="root";
+			  String senha = "";
+			 
 
-			// Class.forName("com.mysql.jdbc.Driver").newInstance();
-			Class.forName("org.postgresql.Driver").newInstance();
+			 Class.forName("com.mysql.jdbc.Driver").newInstance();
+			//Class.forName("org.postgresql.Driver").newInstance();
 
 			con = DriverManager.getConnection(url, usuario, senha);
 

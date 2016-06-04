@@ -57,13 +57,12 @@ public class DefaultPaciente {
 
 	public boolean atualizarPaciente(Paciente paciente) {
 		try {
-			stmt = con.prepareStatement("update paciente set nome=?,rg=?,dtNasc=?,"
-					+ "bairro=?,endereco=?,telResidencial=?,telCelular=?," + "mae=?,pai=? where idPaciente = ?");
+			stmt = con.prepareStatement("update paciente set nome=?, telefone=?, email=? where idPaciente = ?");
 
 			stmt.setString(1, paciente.getNome());
-			stmt.setInt(2, paciente.getCPF());
-			stmt.setInt(3, paciente.getRG());
-			stmt.setLong(4, paciente.getIdentificador());
+			stmt.setString(2, paciente.getTelefone());
+			stmt.setString(3, paciente.getEmail());
+			stmt.setInt(4, paciente.getIdentificador());
 
 			exe = stmt.execute();
 
@@ -75,21 +74,21 @@ public class DefaultPaciente {
 		return exe;
 	}
 
-	public Paciente getPaciente(int rg) {
+	public Paciente getPaciente(Paciente paciente) {
 
 		ResultSet rs = null;
 		try {
-			stmt = con.prepareStatement("select * from paciente where rg = ?");
+			stmt = con.prepareStatement("select * from paciente where Idpaciente = ?");
 
-			stmt.setInt(1, rg);
+			stmt.setInt(1, paciente.getIdentificador());
 			rs = stmt.executeQuery();
 
 			if (rs.next()) {
 				paciente = new Paciente();
 				paciente.setIdentificador(rs.getInt("idpaciente"));
 				paciente.setNome(rs.getString("nome"));
-				paciente.setRG(rs.getInt("rg"));
 				paciente.setCPF(rs.getInt("cpf"));
+                                paciente.setTelefone(rs.getString("telefone"));
 
 			}
 		} catch (SQLException e) {

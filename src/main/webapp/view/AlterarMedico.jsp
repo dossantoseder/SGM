@@ -1,5 +1,4 @@
 
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -22,7 +21,7 @@
             }
         </style>
 
-        <title>Funcionário</title>
+        <title>Médico</title>
     </head>
     <body>
         <nav class="navbar navbar-inverse" style="min-height: 135px">
@@ -38,7 +37,7 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Funcionário</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Médico</a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
                         <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
@@ -48,62 +47,36 @@
         </nav>
         <div class="jumbotron">
             <div class="container text-center">
-                <p>Atualização de Dados do Paciente</p>
+                <p>Atualização do Cadastro Médico</p>
             </div>
             <div class="container">
-                <form name="AtualizarPaciente" action="Servlet.Controller" method="post">  
-                     <input type="hidden" name="action" value="AtualizarPacienteControl" />
+                <form name="alterarMedico" action="Servlet.Controller" method="post">  
+                    <input type="hidden" name="action" value="AtualizarMedicoCommand" />
                     <div class="form-group row ">
-                        <div class="col-md-6">            
+                        <div class="col-md-7">            
                             <label for="txtNome" class="col-sm-2 form-control-label">Nome</label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-8">
                                 <input type="text" maxlength="25" value="<%=request.getParameter("nome")%>" class="form-control" name="txtNome">
                             </div>                        
                         </div>
-                        <div class="col-md-6">
-                            <label for="txtRg" class="col-sm-2 form-control-label">RG</label>
-                            <div class="col-sm-4">
-                                <input  type="text"  class="form-control" name="txtRg">
-                            </div>
-                        </div>
                     </div>
                     <div class="form-group row ">
-                        <div class="col-md-6">            
-                            <label for="txtEmail" class="col-sm-2 form-control-label">Email</label>
-                            <div class="col-sm-6">
-                                <input type="text" maxlength="9" value="<%=request.getParameter("email")%>" class="form-control" name="txtEmail">
-                            </div>                        
-                        </div>
-                        <div class="col-md-6">            
-                            <label for="txtCpf" class="col-sm-2 form-control-label">CPF</label>
+                        <div class="col-md-7">            
+                            <label for="txtEspecialidade" class="col-sm-2 form-control-label">Especialidade</label>
                             <div class="col-sm-4">
-                                <input type="text" maxlength="11"  class="form-control" name="txtCpf">
+                                <input type="text" maxlength="9" value="<%=request.getParameter("especialidade")%>" class="form-control" name="txtEspecialidade">
                             </div>                        
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6">            
+                        </div>  
+                    </div> 
+                    <div class="form-group row ">
+                        <div class="col-md-7">            
                             <label for="txtTelefone" class="col-sm-2 form-control-label">Telefone</label>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <input type="text" maxlength="9" value="<%=request.getParameter("telefone")%>" class="form-control" name="txtTelefone">
                             </div>                        
-                        </div>
-                        <div class="col-md-6">            
-                            <label for="txtSenha" class="col-sm-2 form-control-label">Senha</label>
-                            <div class="col-sm-4">
-                                <input type="text" maxlength="9" class="form-control" name="txtSenha">
-                            </div>                        
-                        </div>
-                    </div>
-                    <div class="form-group row"> 
-                        <div class="col-md-6">            
-                            <label for="txtLogin" class="col-sm-2 form-control-label">Login</label>
-                            <div class="col-sm-4">
-                                <input type="text" maxlength="9" class="form-control" name="txtLogin">
-                            </div>                        
-                        </div>              
-                    </div>               
-                    <button type="submit" class="btn btn-warning">Cadastar</button>
+                        </div>  
+                    </div> 
+                    <button type="submit" class="btn btn-warning">Atualizar</button>
                 </form>
             </div>
         </div>
@@ -112,3 +85,7 @@
         </footer>
     </body>
 </html>
+
+
+
+

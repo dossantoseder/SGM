@@ -10,6 +10,28 @@ public class Paciente {
     private String nome;
     private int RG;
     private int CPF;
+
+    public Paciente( String email, String telefone, String nome){
+        this.email = email;
+        this.telefone = telefone;
+        this.nome = nome;
+    }
+
+    public Paciente(String email, String telefone, String nome, int RG, int CPF) {
+        this.email = email;
+        this.telefone = telefone;
+        this.nome = nome;
+        this.RG = RG;
+        this.CPF = CPF;
+    }
+
+    public Paciente() {
+    }
+
+    public Paciente(int identificador) {
+        this.identificador = identificador;
+    }
+    
   
     public String getEmail() {
         return email;

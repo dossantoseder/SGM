@@ -18,20 +18,7 @@ public class EspecialidadeControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Especialidade especialidade = new Especialidade();
-        boolean resposta = false;
-       
-        //Pegando parâmetros da tela. 
-        especialidade.setIdentificador(Integer.parseInt(request.getParameter("txtCodigoEspecialidade")));   //a servlet pode não funcionar por causa dessa converã para inteiro  
-        especialidade.setNome(request.getParameter("txtEspecialidade"));
-        especialidade.setValor(Double.valueOf(request.getParameter("txtValorBase")));
-        especialidade.setDescricao(request.getParameter("txtDescricaoEspecialidade"));
-       
-        try {
-            resposta = especialidade.cadastrarEspecialidade(especialidade);
-        } catch (Exception ex) {
-            Logger.getLogger(EspecialidadeControl.class.getName()).log(Level.SEVERE, null, ex);
-        }
+      
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
